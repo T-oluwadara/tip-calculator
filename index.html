@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="input.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="bg-lightGrayishCyan">
+    <section class="py-20 md:py-36 md:px-20 xl:px-60" id="main-container">
+      <img src="images/logo.svg" alt="" class="mx-auto" />
+
+      <div class="rounded-tr-3xl rounded-tl-3xl bg-white md:rounded-2xl mt-10 p-5 md:p-10 shadow-lg">
+        <div class="flex flex-col md:flex-row md:space-x-12">
+          <div class="flex flex-col md:w-1/2">
+            <div class="flex flex-row justify-between">
+              <div>
+                <p class="text-grayishCyan mt-10 mb-5">Bill</p>
+              </div>
+              <div class="error"></div>
+            </div>
+            <div class="relative">
+              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                <img src="images/icon-dollar.svg" alt="" />
+              </div>
+              <input type="text" id="bill-no" class="form bg-veryLightGrayishCyan focus:outline-emerald-500 rounded block w-full pl-10 p-2.5 text-right text-veryDarkCyan text-2xl outline-none" placeholder="0" />
+            </div>
+
+            <p class="text-grayishCyan mt-10 mb-5">Select Tip %</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4 text-center mb-5 text-white text-xl">
+              <button type="" class="select-tip bg-veryDarkCyan rounded p-3" data-percentage="5">5%</button>
+              <button class="select-tip bg-veryDarkCyan rounded p-3" data-percentage="10">10%</button>
+              <button class="select-tip active bg-veryDarkCyan rounded p-3" data-percentage="15">15%</button>
+              <button class="select-tip bg-veryDarkCyan rounded p-3" data-percentage="25">25%</button>
+              <button class="select-tip bg-veryDarkCyan rounded p-3" data-percentage="50">50%</button>
+              <div class="select-tip tip-select-custom">
+                <input type="text" id="custom-no" class="tip-custom bg-veryLightGrayishCyan focus:outline-emerald-500 rounded text-veryDarkCyan block w-full p-3 text-center text-2xl outline-none" placeholder="Custom" />
+              </div>
+            </div>
+
+            <div>
+              <p class="text-grayishCyan mt-10 mb-5">Number of People</p>
+            </div>
+            <div class="error"></div>
+
+            <div class="relative">
+              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                <img src="images/icon-person.svg" alt="" />
+              </div>
+              <input type="text" id="people-no" class="form bg-veryLightGrayishCyan focus:outline-emerald-500 rounded text-veryDarkCyan block w-full pl-10 p-2.5 text-right text-xl lg:text-2xl outline-none" placeholder="1" />
+            </div>
+          </div>
+
+          <div class="flex flex-col mt-10 md:mt-0 md:w-1/2 bg-veryDarkCyan py-8 px-4 md:px-6 xl:p-14 rounded-2xl">
+            <div class="flex flex-col">
+              <div class="flex flex-row justify-between">
+                <div class="flex flex-col">
+                  <h5 class="text-white">Tip Amount</h5>
+                  <p class="text-grayishCyan">/ person</p>
+                </div>
+
+                <div class="flex flex-col">
+                  <div>
+                    <p id="tip-value" class="text-4xl md:text-5xl text-strongCyan">$0.00</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-5 md:mt-14 flex flex-row justify-between">
+                <div class="flex flex-col">
+                  <h5 class="text-white">Total</h5>
+                  <p class="text-grayishCyan">/ person</p>
+                </div>
+                <div class="flex flex-col">
+                  <div>
+                    <p id="total-value" class="text-4xl md:text-5xl text-strongCyan">$0.00</p>
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" id="reset-btn" class="p-3 rounded mt-10 md:mt-32 text-center w-full text-veryDarkCyan bg-darkCyan text-2xl uppercase hover:bg-lightGrayishCyan">Reset</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

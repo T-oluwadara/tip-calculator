@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Space Mono", monospace;
+}
+
+.select-tip.active {
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+}
+
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+  border-width: 2px;
+}
+
+.input-control.error {
+  color: #ff3860;
+  font-size: 13px;
+  text-align: right;
+  font-weight: 500;
+}
